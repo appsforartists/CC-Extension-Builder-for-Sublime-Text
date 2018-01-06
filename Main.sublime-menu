@@ -1,23 +1,20 @@
 [
-{
+  {
     "id": "tools",
-    "children":
-    [
-    {
-	    "id": "ccext",
-	    "caption": "CC Extensions",
-	    "children":
-	    [
-	        {"caption": "Create Extension", "command": "createext" },
-	        {"caption": "Open Developer Tools", "command": "showdevtools" },
-	        {"caption": "Browse Extension Folder", "command": "showextfolder" },	 
-	        {"caption": "-", "id":"separator"},
-	        {"caption": "Enable Debug Mode", "command": "enabledebug" },	        
-	        {"caption": "-", "id":"separator"},
-	        {"caption": "Fix Permissions", "command": "fixpermissions" }
-
-	    ]
-	}
+    "children": [
+      {
+        "id": "ccext",
+        "caption": "CC Extensions",
+        "children": [
+          { "caption": "Create Extension", "command": "create_ext" },
+          { "caption": "Open Developer Tools", "command": "show_dev_tools" },
+          { "caption": "Browse Extension Folder", "command": "show_ext_folder" },
+          { "caption": "-", "id": "separator" },
+          { "caption": "Enable Debug Mode", "command": "enable_debug" },
+          { "caption": "-", "id": "separator" },
+          { "caption": "Fix Permissions", "command": "fix_permissions" }
+        ]
+      }
     ]
-}
+  }
 ]

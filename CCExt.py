@@ -8,7 +8,7 @@ SDK_PATH = PLUGIN_PATH + "/cc-ext-sdk/"
 USER_DIR = os.path.expanduser("~")
 IS_WIN = (os.name == "nt")
 if IS_WIN:
-	LIB_PATH = USER_DIR + "/AppData/Roaming/Adobe/"	
+	LIB_PATH = USER_DIR + "/AppData/Roaming/Adobe/"
 	SC_EXT = "bat"
 else :
 	LIB_PATH = USER_DIR + "/Library/Application Support/Adobe/"
@@ -21,7 +21,7 @@ CEP_PATH = LIB_PATH + CEP_FOLDER
 CEP_EXT_PATH = CEP_PATH + "extensions/"
 
 
-class CreateextCommand(sublime_plugin.TextCommand):
+class CreateExtCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
 		self.view.window().show_input_panel("Extension ID:", extid, self.on_done, None, None)
@@ -40,32 +40,32 @@ class CreateextCommand(sublime_plugin.TextCommand):
 		sublime.set_timeout(lambda:self.replaceDebugId(debugview), 300);
 
 	def replaceDebugId(self, v):
-		v.window().run_command("replaceid")
+		v.window().run_command("replace_id")
 		v.window().run_command("save")
 		manifview = v.window().open_file(CEP_EXT_PATH + extid + "/CSXS/manifest.xml");
 		#ugly timeout until I understand how to deal with async file creation
 		sublime.set_timeout(lambda:self.replaceId(manifview), 300);
 
 	def replaceId(self, v):
-		v.window().run_command("replaceid")
+		v.window().run_command("replace_id")
 		v.window().run_command("save")
 
 
-class EnabledebugCommand(sublime_plugin.TextCommand):
+class EnableDebugCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
 		self.view.window().run_command("exec", {"cmd":[SDK_PATH + "setdebugmode." + SC_EXT]});
 
 
 
-class FixpermissionsCommand(sublime_plugin.TextCommand):
+class FixPermissionsCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
 		subprocess.call(["chmod", "-R", "755", SDK_PATH ]);
 
 
 
-class ShowdevtoolsCommand(sublime_plugin.TextCommand):
+class ShowDevToolsCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
 		# Warning: Static debugging port
@@ -73,7 +73,7 @@ class ShowdevtoolsCommand(sublime_plugin.TextCommand):
 
 
 
-class ReplaceidCommand(sublime_plugin.TextCommand):
+class ReplaceIdCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
 		matches = reversed(self.view.find_all("com.example.ext"))
@@ -82,7 +82,7 @@ class ReplaceidCommand(sublime_plugin.TextCommand):
 
 
 
-class ShowextfolderCommand(sublime_plugin.TextCommand):
+class ShowExtFolderCommand(sublime_plugin.TextCommand):
 
 	def run(self, edit):
 		self.view.window().run_command("open_dir", {"dir": CEP_EXT_PATH});
