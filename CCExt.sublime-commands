@@ -1,7 +1,7 @@
 [
-  { "caption": "Adobe CEP: Create Extension", "command": "create_ext" },
-  { "caption": "Adobe CEP: Open Developer Tools", "command": "show_dev_tools" },
-  { "caption": "Adobe CEP: Browse Extension Folder", "command": "show_ext_folder" },
-  { "caption": "Adobe CEP: Enable Debug Mode", "command": "enable_debug" },
-  { "caption": "Adobe CEP: Fix Permissions", "command": "fix_permissions" }
+  { "caption": "Adobe CC: Create Extension", "command": "create_ext" },
+  { "caption": "Adobe CC: Open Developer Tools", "command": "show_dev_tools" },
+  { "caption": "Adobe CC: Browse Extension Folder", "command": "show_ext_folder" },
+  { "caption": "Adobe CC: Enable Debug Mode", "command": "enable_debug" },
+  { "caption": "Adobe CC: Fix Permissions", "command": "fix_permissions" }
 ]
