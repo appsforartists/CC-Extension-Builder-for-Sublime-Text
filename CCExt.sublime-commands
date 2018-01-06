@@ -1,0 +1,7 @@
+[
+  { "caption": "Adobe CEP: Create Extension", "command": "createext" },
+  { "caption": "Adobe CEP: Open Developer Tools", "command": "showdevtools" },
+  { "caption": "Adobe CEP: Browse Extension Folder", "command": "showextfolder" },
+  { "caption": "Adobe CEP: Enable Debug Mode", "command": "enabledebug" },
+  { "caption": "Adobe CEP: Fix Permissions", "command": "fixpermissions" }
+]
